@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-state = 1">
+	<title> Website for Solar Prediction Project </title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+	
+	<style> 
+         .p2 {
+            float: left;
+            margin-top: 40px;
+            text-align: center;
+            margin-left: 530px;
+         }
+         
+         .p3 {
+            float: left;
+            margin-left: 150px;
+         }
+         
+                  .para {
+            float: left;
+            width: 100%;
+         }
+	</style>
+
+</head>
+
+ <body>
+
+     {% extends "layout.html" %}
+     {% block content %}
+      <h3> The following images shows how the physical part of the project was implemented </h3> 
+      <div class="p3" class="container">
+
+
+      
+      <img src="{{url_for('static', filename='top_view_close_up.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> Measurements were taken and sections of a wooden plank cut to apppropriate sizes </p> 
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+            
+      <img src="{{url_for('static', filename='module_tem_sensor.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> More measurements </p> 
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+
+      
+      <img src="{{url_for('static', filename='electrical_sensor.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> more cutting </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='ESP32_On.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> Basic hand tool skills were needed to construct the mounting structure </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div> 
+      
+      <img src="{{url_for('static', filename='backside_view.png')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> The sensors were neatly mounted on a piece of cardboad and integrated with the panel </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_153615.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> The structure was given a black paint finish </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_153649.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> The final mounting structure </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_153555.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> Only thing left now was to mount the panel to the structure </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_154044.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> The final integrated system viewed from the top </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_163308.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> Another slanted arial view of the final system </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_162611.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> To protect the sensors from rain, they werer placed inside a housing </p>
+      
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+      
+      <img src="{{url_for('static', filename='IMG_20211016_162947.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> Integrating the sensor housing to the panel mmount</p>
+     
+      <div class = "para">&nbsp</div>
+      <div class = "para">&nbsp</div>
+     
+      <img src="{{url_for('static', filename='IMG_20211016_163052.jpg')}}" align="middle" width="500" height="500" style="vertical-align:bottom" />
+      <p> Backview of the complete system. </p>
+      
+      
+
+      
+     </div>
+     
+     {% endblock content %}
+    <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+   <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='myscript.js')}}"></script>
+ </body>
+</html>

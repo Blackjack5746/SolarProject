@@ -1,0 +1,96 @@
+/**BODY**/
+body {
+	font-size: 16px;
+	color: black;
+	background-color: lightgoldenrodyellow;
+	background-image: url({{url_for('static', filename='Untitled.png')}});
+	font-family: helvertica;
+}
+
+/**HEADER**/
+ #header-nav{
+ 	background-color: lightblue;
+ 	margin-top: 20px;
+ 	border-radius: 15px;
+ 	border: 0;
+ }
+ 
+
+   #One {
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        float: left;
+        width: 25%;
+   }
+
+   #Two {
+        margin-top: 40px;
+        padding-right: 10px;
+        padding-left: 160px;
+        float: left;
+        width: 50%;
+   }
+
+   #Three {
+        background-color: lightblue;
+        border-radius: 15px;
+        margin-top: 40px;
+        float: left;
+        width: 25%;
+   }
+
+   #Four {
+        float: ;
+        margin-top: 340px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 50%;
+   }
+
+   #Five {
+        float: left;
+        margin-top: 40px;
+        margin-left: 25%;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 16%;
+        height: 50px;
+   }
+
+   #Six {
+        float: left;
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 16%;
+        height: 50px;
+   }
+
+   #Seven {
+        float: left;
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 20%;
+        height: 50px;
+   }
+
+   #Eight {
+        float: left;
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        margin-left: 35%;
+        width: 1120px;
+        height: 250px;
+   }
+   
+
+   .p1 {
+     text-align: center;
+   }
+   
+      .p2 {
+     text-align: 5em;
+   }

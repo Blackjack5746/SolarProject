@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-state = 1">
+	<title> Website for Solar Prediction Project </title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	
+	<style>
+         .l1 {
+          text-indent: 20em;
+         }
+           
+         .fa {
+          padding: 20px;
+          font-size: 30px;
+          width: 50px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .fa-twitter {
+          background: #55ACEE;
+          color: white;
+        }
+        
+        
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+        
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        
+        .fa-instagram {
+          background: #125688;
+          color: white;
+        }  
+        
+        
+        li{
+        list-style: none;
+        }
+	</style>
+
+
+</head>
+
+ <body>
+
+  <header> 
+
+   <nav id = "header-nav" class = "navbar navbar-default">
+    <div class = "container">
+
+
+      <div class ="l1">
+       <h1> Solar Panel Energy Yield Prediction Project </h1>
+      </div>
+
+   </nav>
+   <!-- this is comment -->
+  </header>
+
+    <div id="Three" class="container">
+     <ul class="p1">
+      <li> <button type="button" class="btn btn-info" onclick= "window.location.href='/';"> HOME</button> </li>
+      <li> <button type="button" class="btn btn-info" onclick= "window.location.href='Details';">ABOUT THE PROJECT</button> </li>
+      <li> <button type="button" class="btn btn-info" onclick= "window.location.href='Gallery';">GALLERY</button> </li>
+      <li> <button type="button" class="btn btn-info" onclick= "window.location.href='About';">ABOUT AUTHOR</button> </li>
+     </ul>
+     
+       <a href="https://web.facebook.com/blessing.mabasa/" class="fa fa-facebook" target="_blank"></a>
+       <a href="https://twitter.com/blessy_vb?lang=en" class="fa fa-twitter" target="_blank"></a>
+       <a href="https://www.linkedin.com/in/blessing-mabasa-7364988b/" class="fa fa-linkedin" target="_blank"></a>
+       <a href="https://www.youtube.com/channel/UCHdmjTaYQKYUbZaoDbXYzkg" class="fa fa-youtube" target="_blank"></a>
+       <a href="https://www.instagram.com/blessingmabasa/?hl=en" class="fa fa-instagram" target="_blank"></a>
+    </div>
+
+           {% block content %}
+           {% endblock %}
+           
+           
+
+        <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+      <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{url_for('static', filename='myscript.js')}}"></script>
+  <!-- <footer> Copyright©Heroku 2021 </footer>    find a way to solve the issue of the footer -->
+ </body>
+</html>

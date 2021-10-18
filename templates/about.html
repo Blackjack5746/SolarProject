@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-state = 1">
+	<title> Website for Solar Prediction Project </title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+	
+	<style> 
+         .a3 {
+            float: left;
+            margin-top: 40px;
+            margin-left: 100px;
+         }
+         
+         .a4 {
+            float: left;
+            margin-top: 40px;
+            width: 25%;
+            margin-left: 100px;
+         }
+         
+         .a5 {
+            float: left;
+            margin-left: 480px;
+         }
+                    
+	</style>
+
+</head>
+
+ <body>
+     
+     {% extends "layout.html" %}
+     {% block content %}
+      
+      <div class="a3" class="container">  
+      <img src="{{url_for('static', filename='blessing.jpeg')}}" align="middle" width="450" height="513" style="vertical-align:bottom" />
+      <p> This is me. I always forget to smile for pictures, but oh well </p> 
+      </div>
+      <div class="a4" class="container"> <p> My name is Vutivi Mabasa, I am a 4th year B.Eng. Electrical and Electronics 
+      engineering student at UJ, and a UJENIUS club member, which I am told means I am one of the top performing students at 
+      the university. I used to work as a Heat Treatment technician at Stanley Black & Decker, but I quit to pursue my lifelong
+      dream of being an electrical engineer. I fully subscribe to the mantra that hard work beats talent every time. I am far 
+      from being the smartest guy around, but I (over)compensate for this through sheer hard work and determination. My work 
+      ethic is guided by these two words, order, and consistency. I break down and plan all my tasks, and then work consistently 
+      everyday towards each of them; I never leave anything to chance. That is how I handle the pressures of varsity - through
+      the power of the schedule. I never miss deadlines, I never give excuses, and I always try to maintain very high 
+      standards in my work. I love learning, always curious, and I ask lots of questions. Welcome to my website, hope you find 
+      it interesting. 
+      </p> </div>
+      
+      
+      
+      <div class="a5" class="container">  
+      <img src="{{url_for('static', filename='Headshot.jpg')}}" align="middle" width="450" height="513" style="vertical-align:bottom" />
+      <p> This is what I wear when I am trying to pretend to look professional </p> 
+      </div>      
+      <div class="a4" class="container"> <p> Originally from a small town in Limpopo, I currently reside in Devland, 
+      Johannesburg. I would describe myself as a high-performing individual, a nonconformist who believes that the only limits 
+      one has are those he sets for himself. I chose to do a research project in reweable energy because I am committed to the 
+      fight against the devastating impacts of climate change on our planet. As of 2020, the Doomsday clock reads 100 seconds 
+      to midnight. We cannot continue leaving it up to the governments and companies. It is up to us, now. We, the citizens of 
+      this beautiful planet must take it upon ourselves to ensure its continued survival; because if we don't, we will wake up 
+      one day and it will be too late; and those that helped destroy this place while we sat back and watched? Well, they'll 
+      be on their way to Mars! Don't forget to check out my social media accounts, especially my YouTube channel where I post
+      about my favourite topic in all of physics, electromagnetic theory. I do think Maxwell is the greatest of all time, by the way.
+       </p> </div>
+     
+     
+      <div class="a5" class="container">  
+      <img src="{{url_for('static', filename='blood_brothers.png')}}" align="middle" width="450" height="513" style="vertical-align:bottom" />
+      <p> The two most important people in the world. Where would I be
+      </p> 
+      </div>      
+      <div class="a4" class="container"> <h3> Some of my achievemets as a student: </h3> <p> As one of the top-achieving 
+      students at UJ, I am frequently invited to the Dean's honors award ceremonies due to my academic achievements. 
+      I am a very hard-working person and I love what I do, which I believe is a critical ingredient for success in anything, 
+      really. I do not shy away from responsibility because I have a strong belief in myself and my abilities, and that is 
+      why I often volunteer to be a group leader or captain whenever group work is involved. I take practice makes perfect 
+      to extreme levels. I do not stop until I have mastered something, and I'm not afraid to go after what I want. On a 
+      lighter note, my favourite hobby is reading, especially fiction like Stephen King and Graham Masterton.  </p>  </div>
+      
+      
+      
+     {% endblock content %}
+ 
+
+           
+      
+     <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+   <script src="{{url_for('static', filename='myscript.js')}}"></script>
+  </body>
+ <footer> Copyright©Heroku 2021 </footer>    <!-- find a way to solve the issue of the footer -->
+</html>    
+

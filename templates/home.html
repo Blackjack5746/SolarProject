@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-state = 1">
+	<title> Website for Solar Prediction Project </title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+
+</head>
+
+ <body>
+
+        {% extends "layout.html" %}
+     {% block content %}
+     
+         <div id="Two" class="container">
+     <iframe width="450" height="260" style="border: 1px solid #cccccc" src="https://thingspeak.com/channels/1447918/charts/7?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+     <p class="p1">Graph of actual output power</p>
+    </div>
+
+     
+      <div id="One" class="container">
+     <h3 class="p1"> Sensor Data </h3>
+      <ul class="p2">
+        <div> <h5> air temperature: {{field111}} </h5> </div>
+        <div> <h5> humidity: {{field221}} </h5> </div>
+        <div> <h5> module temperate: {{field331}} </h5> </div>
+        <div> <h5> dust: {{field441}} </h5> </div>
+        <div> <h5> presure: {{field551}} </h5> </div>
+        <div> <h5> carbon monoxide: {{field661}} </h5> </div>
+      </ul> 
+
+    </div>
+
+
+
+    <div id="Four" class="container">
+      <div class="p1"> 
+      <button type="button" class="btn btn-info" onclick= "window.location.href='predict';"> <b> Predict </b> </button> 
+      </div>
+    </div>
+
+    <div id="Five" class="container">
+      <div class="p1"> Predicted Power is {{Predicted}} W </div>
+    </div>
+
+    <div id="Six" class="container">
+      <div class="p1"> Actual Power is {{Actual}} W </div>
+    </div>
+
+    <div id="Seven" class="container">
+      <div class="p1"> {{Error}}% error </div>
+    </div>
+
+        <div id="Eight" class="container">
+      <p class="p1"> <u><b> Explanation of results </b></u>  </p>
+      <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          To get an explanation for a prediction, click the predict button above </p>
+    </div>
+
+     {% endblock content %}
+      
+    
+
+                
+      <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+   <script src="{{url_for('static', filename='myscript.js')}}"></script>
+  </body>
+ <footer> Copyright©Heroku 2021 </footer>    <!-- find a way to solve the issue of the footer -->
+</html>
