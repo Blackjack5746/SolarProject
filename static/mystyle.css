@@ -1,0 +1,94 @@
+/**BODY**/
+body {
+	font-size: 16px;
+	color: black;
+	background-color: lightgoldenrodyellow;
+	font-family: helvertica;
+}
+
+/**HEADER**/
+ #header-nav{
+ 	background-color: lightblue;
+ 	margin-top: 20px;
+ 	border-radius: 15px;
+ 	border: 0;
+ }
+
+ #logo-img {
+ 	background: url('logo-img.jpg');
+ 	width: 50px;
+ 	height: 50px;
+ 	margin: 1px 15px 1px -110px;
+ }
+
+   #One {
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        float: left;
+        width: 25%;
+   }
+
+   #Two {
+        margin-top: 40px;
+        padding-right: 10px;
+        padding-left: 160px;
+        float: left;
+        width: 50%;
+   }
+
+   #Three {
+        background-color: lightblue;
+        border-radius: 15px;
+        margin-top: 40px;
+        float: left;
+        width: 25%;
+   }
+
+   #Four {
+        float: ;
+        margin-top: 340px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 50%;
+   }
+
+   #Five {
+        float: left;
+        margin-top: 40px;
+        margin-left: 25%;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 16%;
+        height: 50px;
+   }
+
+   #Six {
+        float: left;
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 16%;
+   }
+
+   #Seven {
+        float: left;
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 16%;
+   }
+
+   #Eight {
+        float: left;
+        margin-top: 40px;
+        background-color: lightblue;
+        border-radius: 15px;
+        width: 100%;
+        height: 100px;
+   }
+
+
+   .p1 {
+     text-align: center;
+   }
