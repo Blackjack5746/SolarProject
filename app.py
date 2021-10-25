@@ -19,16 +19,6 @@ tf.keras.models.load_model("model2.pkl")
 
 @app.route("/")
 def home():
-    req1 = requests.get('https://api.thingspeak.com/channels/1447918/feeds.json?api_key=9XU54S4EIC3I8110&results=1')
-    our_data1 = json.loads(req1.content)
-    Air1 = our_data1['feeds']
-    Moya1 = Air1[0]
-    air_temp1 = round(float(Moya1['field1']), 5)
-    mod_temp1 = round(float(Moya1['field2']), 5)
-    atm_pres1 = round(float(Moya1['field3']), 5)
-    rel_hum1  = round(float(Moya1['field4']), 5)
-    Dust1     = round(float(Moya1['field5']), 5)
-    CO_gas1   = round(float(Moya1['field6']), 5)
     return render_template("home.html")
 
 
@@ -59,7 +49,7 @@ def Predict():
     power    = round(abs(float(Moya['field7'])), 5)
     random_dict = {"field1": air_temp, "field2": mod_temp, "field3": atm_pres}
     if mod_temp < -20:
-        mod_Tem = 17.8
+        mod_Tem = 30.9
     else: 
         mod_Tem = mod_temp
     #random_array.reshape(1,3):
@@ -69,11 +59,11 @@ def Predict():
     random_df1[ random_df1 < -20 ] = 17.8 #replace potentially negative values of field3 with average module temp in winter
     random_df = random_df1.values
     #We need to get rid of the missing values before training:
-    np.nan_to_num(random_df[:,0:1], copy=False, nan=19.58) #this is field1
-    np.nan_to_num(random_df[:,1:2], copy=False, nan=47.27) #this is field2
-    np.nan_to_num(random_df[:,2:3], copy=False, nan=17.80) #this is field3
+    np.nan_to_num(random_df[:,0:1], copy=False, nan=24.9) #this is field1
+    np.nan_to_num(random_df[:,1:2], copy=False, nan=39.4) #this is field2
+    np.nan_to_num(random_df[:,2:3], copy=False, nan=30.9) #this is field3
     prediction = tf.keras.models.load_model("model2.pkl").predict(random_df)
-    prediction=round(abs(prediction[0][0]), 5)
+    prediction=round(abs(prediction[0][0]), 3)
     #calculation for the error:
     per_error = ((prediction - power)/power)*100
     #the explanation messages
