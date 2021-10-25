@@ -72,10 +72,9 @@ def Predict():
     per_error = ((prediction - power)/power)*100
     #the explanation messages
     #include the sign of the error in the explanation, is it and under or over estimation?
-    return render_template("predict.html",field11 = air_temp, field22 = mod_Tem, field33 = atm_pres , field44 = rel_hum, 
-                           field55 = Dust, field66 = CO_gas, Actual = power, Predicted = prediction, 
+    return render_template("predict.html",field11 = air_temp, field22 = rel_hum, field33 =  mod_temp , field44 = Dust, 
+                           field55 = atm_pres, field66 = CO_gas, Actual = power, Predicted = prediction, 
                            Error=round(abs(per_error),2))
-
 
 if __name__=='__main__':
     app.run(debug=False)
