@@ -41,28 +41,32 @@ def Predict():
     Air = our_data['feeds']
     Moya = Air[0]
     air_temp = round(float(Moya['field1']), 5)
-    mod_temp = round(float(Moya['field2']), 5)
-    atm_pres = round(float(Moya['field3']), 5)
-    rel_hum  = round(float(Moya['field4']), 5)
-    Dust     = round(float(Moya['field5']), 5)
+    rel_hum  = round(float(Moya['field2']), 5)
+    mod_temp = round(float(Moya['field3']), 5)
+    Dust     = round(float(Moya['field4']), 5)
+    atm_pres = round(float(Moya['field5']), 5)
     CO_gas   = round(float(Moya['field6']), 5)
     power    = round(abs(float(Moya['field7'])), 5)
-    random_dict = {"field1": air_temp, "field2": mod_temp, "field3": atm_pres}
+    random_dict = {"field1": air_temp, "field2": rel_hum, "field3": mod_temp}
+    
     if mod_temp < -20:
         mod_Tem = 30.9
     else: 
         mod_Tem = mod_temp
-    #random_array.reshape(1,3):
+    
     random_df1 = pd.DataFrame(random_dict,
                          index = [['0']],
                          columns = ["field1", "field2", "field3"])
-    random_df1[ random_df1 < -20 ] = 17.8 #replace potentially negative values of field3 with average module temp in winter
+    
     random_df = random_df1.values
+    
     #We need to get rid of the missing values before training:
     np.nan_to_num(random_df[:,0:1], copy=False, nan=24.9) #this is field1
     np.nan_to_num(random_df[:,1:2], copy=False, nan=39.4) #this is field2
     np.nan_to_num(random_df[:,2:3], copy=False, nan=30.9) #this is field3
+    
     prediction = tf.keras.models.load_model("model2.pkl").predict(random_df)
+    
     prediction=round(abs(prediction[0][0]), 3)
     #calculation for the error:
     per_error = ((prediction - power)/power)*100
